@@ -1,4 +1,4 @@
-// Signed integral types:
+// Signed integral types: min/max values 
 // sbyte = -128 to 127
 // short = -32768 to 32767
 // int = -2147483648 to 2147483647
