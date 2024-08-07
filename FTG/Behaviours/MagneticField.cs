@@ -9,7 +9,6 @@ public class MagneticField : MonoBehaviour
     {      
         if (other.TryGetComponent<Rigidbody>(out var rb))
         {
-            // Calculate the direction from this object to the other object
             Vector3 direction = transform.position - other.transform.position;
             float distance = direction.magnitude;
             direction.Normalize();
