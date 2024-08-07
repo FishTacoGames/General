@@ -18,7 +18,10 @@ namespace FishTacoGames
         {
             return new(hit.point.x, hit.point.z);
         }
-
+        private static float CalculateUVPolygonArea(Vector2 uv0, Vector2 uv1, Vector2 uv2)
+        {
+            return 0.5f * Mathf.Abs(Vector2.Dot(uv1 - uv0, new Vector2(uv2.y - uv0.y, uv0.x - uv2.x)));
+        }
         /// <summary>
         /// Rotate a 2D vector value by a given angle (in degrees)
         /// </summary>
