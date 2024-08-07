@@ -10,9 +10,9 @@ namespace FishTacoGames
         {
             return direction - 2f * Vector3.Dot(direction, normal) * normal;
         }
-        private static float CalculateUVPolygonArea(Vector2 uv0, Vector2 uv1, Vector2 uv2)
+        private static float CalculateTriangleArea(Vector3 p1, Vector3 p2, Vector3 p3)
         {
-            return 0.5f * Mathf.Abs(Vector2.Dot(uv1 - uv0, new Vector2(uv2.y - uv0.y, uv0.x - uv2.x)));
+            return Vector3.Cross(p2 - p1, p3 - p1).magnitude * 0.5f;
         }
         /// <summary>
         /// Calculates the projection of a vector onto another vector.
