@@ -14,7 +14,7 @@ public class MeshReader
             Vector2 uv0 = uvs[triangles[i]];
             Vector2 uv1 = uvs[triangles[i + 1]];
             Vector2 uv2 = uvs[triangles[i + 2]];
-            totalUVArea += CalculateUVPolygonArea(uv0, uv1, uv2);
+            totalUVArea += FishTacoGames_Vec2.CalculateUVPolygonArea(uv0, uv1, uv2);
 
             int vertexIndex1 = triangles[i];
             int vertexIndex2 = triangles[i + 1];
@@ -22,7 +22,7 @@ public class MeshReader
             Vector3 v1 = vertices[vertexIndex1];
             Vector3 v2 = vertices[vertexIndex2];
             Vector3 v3 = vertices[vertexIndex3];
-            totalTriangleArea += CalculateTriangleArea(v1, v2, v3);
+            totalTriangleArea += FishTacoGames_Vec3.CalculateTriangleArea(v1, v2, v3);
         }
         if (totalTriangleArea > 0f && totalUVArea > 0)
         {
