@@ -42,7 +42,7 @@ public static class TextureFileLogic
         return isalphatexture;
     }
 
-    private static void MakeTextureReadable(Texture2D tex2D) // TODO dislpay a 'are you sure? ' message? currently this would result in multiple popups
+    private static void MakeTextureReadable(Texture2D tex2D)
     {
         string assetPath = AssetDatabase.GetAssetPath(tex2D);
         TextureImporter textureImporter = AssetImporter.GetAtPath(assetPath) as TextureImporter;
