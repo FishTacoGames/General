@@ -21,7 +21,7 @@ public class Trap : MonoBehaviour
     {
         startPos = SpikeTrap.transform.position;
         endPos = startPos + Vector3.forward * distance;
-        Interact();
+       // Interact();
     }
     public void Interact()
     {
