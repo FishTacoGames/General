@@ -17,6 +17,8 @@ public class Trap : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
+   // private Coroutine trapRoutine;
+
     private void Start()
     {
         startPos = SpikeTrap.transform.position;
@@ -25,13 +27,15 @@ public class Trap : MonoBehaviour
     }
     public void Interact()
     {
+        //if (trapRoutine != null)
+        //    StopCoroutine(trapRoutine);
+        //trapRoutine = StartCoroutine(TrapAction());
         TriggerTrap();
     }
     private void TriggerTrap()
     {
         StartCoroutine(TrapAction());
     }
-
     private IEnumerator TrapAction()
     {
         yield return new WaitForSeconds(trapDelay);
