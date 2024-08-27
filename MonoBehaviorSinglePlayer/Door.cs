@@ -20,7 +20,10 @@ public class Door : MonoBehaviour
         originalRotation = transform.localEulerAngles;
        // Rotate(DummyPlayer);
     }
-
+    public void Interact(Transform player)
+    {
+        Rotate(player);
+    }
     private void Rotate(Transform player)
     {
         front = Vector3.Dot(transform.forward, player.position - transform.position) > 0;
@@ -47,10 +50,5 @@ public class Door : MonoBehaviour
         }
         transform.localEulerAngles = endRotation;
        // Rotate(DummyPlayer);
-    }
-
-    public void Interact(Transform player)
-    {
-        Rotate(player);
     }
 }
